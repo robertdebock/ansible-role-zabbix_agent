@@ -1,0 +1,24 @@
+---
+# tasks file for zabbix_agent
+- name: install zabbix-agent software
+  package:
+    name: zabbix-agent
+    state: "{{ zabbix_agent_package_state | default('present') }}"
+  register: zabbix_agent_install_zabbix_agent_software
+  retries: 3
+  until: zabbix_agent_install_zabbix_agent_software is succeeded
+
+- name: configuring zabbix agent
+  template:
+    src: zabbix_agentd.conf.j2
+    dest: /etc/zabbix/zabbix_agentd.conf
+  notify:
+    - restart zabbix-agent
+
+- name: start and enable zabbix agent
+  service:
+    name: zabbix-agent
+    state: started
+    enabled: yes
+  when:
+    - ansible_virtualization_type != "docker" or zabbix_ignore_docker

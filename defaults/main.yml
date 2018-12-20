@@ -1,0 +1,13 @@
+---
+# Values used to confiure zabbix_agent.
+zabbix_agent_server_address: 127.0.0.1
+zabbix_agent_listen_port: 10050
+zabbix_agent_server_active_address: 127.0.0.1
+
+# Some Docker containers do not allow managing services, rebooting and writing
+# to some locations in /etc. The role skips tasks that will typically fail in
+# Docker. With this parameter you can tell the role to -not- skip these tasks.
+zabbix_agent_ignore_docker: yes
+
+# To update all packages installed by this roles, set `zabbix_agent_package_state` to `latest`.
+zabbix_agent_package_state: present

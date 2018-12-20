@@ -1,0 +1,8 @@
+---
+# handlers file for zabbix_agent
+- name: restart zabbix-agent
+  service:
+    name: zabbix-agent
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker" or zabbix_agent_ignore_docker

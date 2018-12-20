@@ -1,0 +1,60 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: zabbix_agent-alpine-edge
+    image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: zabbix_agent-alpine-latest
+    image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: zabbix_agent-archlinux
+    image: base/archlinux
+  - name: zabbix_agent-centos-6
+    image: centos:6
+  - name: zabbix_agent-centos-latest
+    image: centos:latest
+  - name: zabbix_agent-debian-latest
+    image: debian:latest
+  - name: zabbix_agent-debian-stable
+    image: debian:stable
+  - name: zabbix_agent-debian-unstable
+    image: debian:unstable
+  - name: zabbix_agent-fedora-latest
+    image: fedora:latest
+  - name: zabbix_agent-fedora-rawhide
+    image: fedora:rawhide
+  - name: zabbix_agent-opensuse-leap
+    image: opensuse:leap
+  - name: zabbix_agent-opensuse-tumbleweed
+    image: opensuse:tumbleweed
+  - name: zabbix_agent-ubuntu-artful
+    image: ubuntu:artful
+  - name: zabbix_agent-ubuntu-devel
+    image: ubuntu:devel
+provisioner:
+  name: ansible
+  inventory:
+    group_vars:
+      all:
+        zabbix_agent_ignore_docker: no
+    host_vars:
+      zabbix_agent-fedora-rawhide:
+        ansible_python_interpreter: /usr/bin/python3
+  lint:
+    name: ansible-lint
+  config_options:
+    defaults:
+      callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
+scenario:
+  name: default
+verifier:
+  name: goss
+  lint:
+    name: yamllint

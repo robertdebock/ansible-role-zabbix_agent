@@ -1,0 +1,26 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: zabbix_agent-debian-stable
+    image: debian:stable
+provisioner:
+  name: ansible
+  inventory:
+    group_vars:
+      all:
+        zabbix_agent_ignore_docker: no
+  lint:
+    name: ansible-lint
+scenario:
+  name: debian-stable
+verifier:
+  name: goss
+  lint:
+    name: yamllint
