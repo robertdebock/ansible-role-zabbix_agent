@@ -4,8 +4,8 @@
   assert:
     that:
       - zabbix_agent_server_address is defined
-      - zabbix_agent_listen_port => 1
-      - zabbix_agent_listen_port =< 65536
+      - zabbix_agent_listen_port >= 1
+      - zabbix_agent_listen_port <= 65536
       - zabbix_agent_server_active_address is defined
 
 - name: install zabbix-agent software
