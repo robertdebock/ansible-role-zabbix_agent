@@ -21,7 +21,8 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - zabbix_agent
+    - zabbix
+    - agent
     - centos
     - debian
     - el
