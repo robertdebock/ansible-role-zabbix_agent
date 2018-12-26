@@ -3,6 +3,7 @@
 zabbix_agent_server_address: 127.0.0.1
 zabbix_agent_listen_port: 10050
 zabbix_agent_server_active_address: 127.0.0.1
+zabbix_agent_source_ip: "{{ ansible_default_ipv4.address }}"
 
 # Some Docker containers do not allow managing services, rebooting and writing
 # to some locations in /etc. The role skips tasks that will typically fail in
