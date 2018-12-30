@@ -33,6 +33,7 @@ These variables are set in `defaults/main.yml`:
 zabbix_agent_server_address: 127.0.0.1
 zabbix_agent_listen_port: 10050
 zabbix_agent_server_active_address: 127.0.0.1
+zabbix_agent_source_ip: "{{ ansible_default_ipv4.address }}"
 
 # Some Docker containers do not allow managing services, rebooting and writing
 # to some locations in /etc. The role skips tasks that will typically fail in
@@ -85,7 +86,7 @@ This role has been tested against the following distributions and Ansible versio
 |fedora-rawhide*|no|no|no*|
 |opensuse-leap|no|no|no*|
 |opensuse-tumbleweed|no|no|no*|
-|ubuntu-artful|yes|yes|yes*|
+|ubuntu-artful|no|no|no*|
 |ubuntu-devel*|yes|yes|yes*|
 |ubuntu-latest|yes|yes|yes*|
 
