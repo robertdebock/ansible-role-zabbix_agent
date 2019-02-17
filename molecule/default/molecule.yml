@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: zabbix_agent-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: zabbix_agent-ubuntu-artful
-    image: ubuntu:artful
+  - name: zabbix_agent-ubuntu-latest
+    image: ubuntu:latest
+  - name: zabbix_agent-ubuntu-rolling
+    image: ubuntu:rolling
   - name: zabbix_agent-ubuntu-devel
     image: ubuntu:devel
 provisioner:
