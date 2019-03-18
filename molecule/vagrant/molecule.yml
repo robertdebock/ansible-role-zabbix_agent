@@ -3,23 +3,23 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
+lint:
+  name: yamllint
 driver:
   name: vagrant
   provider:
     name: virtualbox
-lint:
-  name: yamllint
 platforms:
-  - name: zabbix-agent-debian
+  - name: zabbix_agent-debian
     box: debian/stretch64
-  - name: zabbix-agent-fedora
+  - name: zabbix_agent-fedora
     box: fedora/29-cloud-base
 provisioner:
   name: ansible
+  playbooks:
+    prepare: ../resources/prepare.yml
+    converge: ../resources/playbook.yml
   lint:
     name: ansible-lint
-  config_options:
-    defaults:
-      callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
 scenario:
   name: vagrant

@@ -13,14 +13,24 @@ This example is taken from `molecule/default/playbook.yml`:
 ---
 - name: Converge
   hosts: all
-  gather_facts: false
-  become: true
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - robertdebock.zabbix_agent
+```
+
+The machine you are running this on, may need to be prepared. Tests have been done on machines prepared by this playbook:
+```yaml
+---
+- name: Prepare
+  hosts: all
+  gather_facts: no
+  become: yes
 
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.zabbix_repository
-    - role: robertdebock.zabbix_agent
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -36,15 +46,6 @@ zabbix_agent_server_address: 127.0.0.1
 zabbix_agent_listen_port: 10050
 zabbix_agent_server_active_address: 127.0.0.1
 zabbix_agent_source_ip: "{{ ansible_default_ipv4.address }}"
-
-# Some Docker containers do not allow managing services, rebooting and writing
-# to some locations in /etc. The role skips tasks that will typically fail in
-# Docker. With this parameter you can tell the role to -not- skip these tasks.
-zabbix_agent_ignore_docker: yes
-
-# To update all packages installed by this roles, set `zabbix_agent_package_state` to `latest`.
-zabbix_agent_package_state: present
-
 ```
 
 Requirements

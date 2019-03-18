@@ -11,7 +11,7 @@
 - name: install zabbix-agent software
   package:
     name: zabbix-agent
-    state: "{{ zabbix_agent_package_state | default('present') }}"
+    state: present
   register: zabbix_agent_install_zabbix_agent_software
   retries: 3
   until: zabbix_agent_install_zabbix_agent_software is succeeded
@@ -29,4 +29,4 @@
     state: started
     enabled: yes
   when:
-    - ansible_virtualization_type != "docker" or zabbix_agent_ignore_docker
+    - ansible_virtualization_type != "docker"
