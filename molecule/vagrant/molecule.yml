@@ -10,10 +10,10 @@ driver:
   provider:
     name: virtualbox
 platforms:
-  - name: zabbix_agent-debian
+  - name: zabbix-agent-debian
     box: debian/stretch64
-  - name: zabbix_agent-fedora
-    box: fedora/30-cloud-base
+    # - name: zabbix-agent-fedora
+    #   box: fedora/30-cloud-base
 provisioner:
   name: ansible
   playbooks:

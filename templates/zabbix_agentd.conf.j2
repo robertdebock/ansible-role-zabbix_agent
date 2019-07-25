@@ -147,8 +147,7 @@ ServerActive={{ zabbix_agent_server_active_address | default('127.0.0.1') }}
 # Mandatory: no
 # Default:
 # Hostname=
-
-Hostname={{ ansible_fqdn }}
+Hostname={{ zabbix_agent_hostname }}
 
 ### Option: HostnameItem
 #	Item used for generating Hostname if it is undefined. Ignored if Hostname is defined.
@@ -168,6 +167,7 @@ Hostname={{ ansible_fqdn }}
 # Range: 0-255 characters
 # Default:
 # HostMetadata=
+HostMetadata={{ zabbix_agent_hostmetadata }}
 
 ### Option: HostMetadataItem
 #	Optional parameter that defines an item used for getting host metadata.
@@ -179,6 +179,7 @@ Hostname={{ ansible_fqdn }}
 # Mandatory: no
 # Default:
 # HostMetadataItem=
+HostMetadataItem={{ zabbix_agent_hostmetadataitem }}
 
 ### Option: RefreshActiveChecks
 #	How often list of active checks is refreshed, in seconds.
@@ -238,6 +239,7 @@ Hostname={{ ansible_fqdn }}
 # Range: 1-30
 # Default:
 # Timeout=3
+Timeout={{ zabbix_agent_timeout }}
 
 ### Option: AllowRoot
 #	Allow the agent to run as 'root'. If disabled and the agent is started by 'root', the agent
