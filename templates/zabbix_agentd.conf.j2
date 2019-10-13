@@ -62,7 +62,9 @@ LogFileSize=0
 #
 # Mandatory: no
 # Default:
+{% if zabbix_agent_source_ip is defined %}
 SourceIP={{ zabbix_agent_source_ip }}
+{% endif %}
 
 ### Option: EnableRemoteCommands
 #	Whether remote commands from Zabbix server are allowed.
