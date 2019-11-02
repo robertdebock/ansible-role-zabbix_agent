@@ -4,5 +4,3 @@
   service:
     name: zabbix-agent
     state: restarted
-  when:
-    - ansible_virtualization_type != "docker"
