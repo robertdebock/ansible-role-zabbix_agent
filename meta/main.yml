@@ -25,6 +25,5 @@ galaxy_info:
     - agent
     - centos
     - rhel
-    - ubuntu
 
 dependencies: []
