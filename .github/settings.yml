@@ -1,4 +1,7 @@
 ---
+#
+# Ansible managed
+#
 repository:
   description: Install and configure zabbix_agent on your system.
   homepage: https://robertdebock.nl/
