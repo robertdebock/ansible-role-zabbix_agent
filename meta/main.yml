@@ -24,6 +24,6 @@ galaxy_info:
     - zabbix
     - agent
     - centos
-    - rhel
+    - redhat
 
 dependencies: []
