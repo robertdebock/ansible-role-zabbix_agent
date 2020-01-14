@@ -1,2 +1,7 @@
 ---
 # vars file for zabbix_agent
+_zabbix_agent_service:
+  default: zabbix-agent
+  Suse: zabbix-agentd
+
+zabbix_agent_service: "{{ _zabbix_agent_service[ansible_os_family] | default(_zabbix_agent_service['default']) }}"
