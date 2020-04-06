@@ -5,4 +5,4 @@
   gather_facts: yes
 
   roles:
-    - ansible-role-zabbix_agent
+    - role: ansible-role-zabbix_agent
