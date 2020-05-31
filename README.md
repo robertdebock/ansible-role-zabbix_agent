@@ -95,12 +95,12 @@ Here is an overview of related roles:
 
 ## Compatibility
 
-This role has been tested on these [container images](https://hub.docker.com/):
+This role has been tested on these [container images](https://hub.docker.com/u/robertdebock):
 
 |container|tags|
 |---------|----|
 |el|7, 8|
-|debian|buster, bullseye|
+|debian|buster|
 |opensuse|all|
 |ubuntu|focal, bionic, xenial|
 
