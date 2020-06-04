@@ -2,9 +2,9 @@
 
 Install and configure zabbix_agent on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-zabbix_agent.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-zabbix_agent)|[![github](https://github.com/robertdebock/ansible-role-zabbix_agent/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/actions)|[![quality](https://img.shields.io/ansible/quality/35761)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|[![downloads](https://img.shields.io/ansible/role/d/35761)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-zabbix_agent.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-zabbix_agent)|[![github](https://github.com/robertdebock/ansible-role-zabbix_agent/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/actions)|[![quality](https://img.shields.io/ansible/quality/35761)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|[![downloads](https://img.shields.io/ansible/role/d/35761)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-zabbix_agent.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
