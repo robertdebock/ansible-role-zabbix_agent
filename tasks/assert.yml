@@ -1,0 +1,70 @@
+---
+- name: test if zabbix_agent_server_address is set correctly
+  assert:
+    that:
+      - zabbix_agent_server_address is defined
+      - zabbix_agent_server_address | length > 0
+
+- name: test if zabbix_agent_listen_port is set correctly
+  assert:
+    that:
+      - zabbix_agent_listen_port is defined
+      - zabbix_agent_listen_port | int
+      - zabbix_agent_listen_port | int > 0
+      - zabbix_agent_listen_port | int < 65536
+
+- name: test if zabbix_agent_server_active_address is set correctly
+  assert:
+    that:
+      - zabbix_agent_server_active_address is defined
+      - zabbix_agent_server_active_address | length > 0
+
+- name: test if zabbix_agent_source_ip is set correctly
+  assert:
+    that:
+      - zabbix_agent_source_ip | length > 0
+  when:
+    - zabbix_agent_source_ip is defined
+
+- name: test if zabbix_agent_hostname is set correctly
+  assert:
+    that:
+      - zabbix_agent_hostname is defined
+      - zabbix_agent_hostname | length > 0
+
+- name: test if zabbix_agent_hostmetadata is set correctly
+  assert:
+    that:
+      - zabbix_agent_hostmetadata is defined
+      - zabbix_agent_hostmetadata | length > 0
+
+- name: test if zabbix_agent_hostmetadataitem is set correctly
+  assert:
+    that:
+      - zabbix_agent_hostmetadataitem is defined
+      - zabbix_agent_hostmetadataitem | length > 0
+
+- name: test if zabbix_agent_timeout is set correctly
+  assert:
+    that:
+      - zabbix_agent_timeout is defined
+      - zabbix_agent_timeout | int
+      - zabbix_agent_timeout | int >= 0
+
+- name: test if zabbix_agent_enableremotecommands is set correctly
+  assert:
+    that:
+      - zabbix_agent_enableremotecommands is defined
+      - zabbix_agent_enableremotecommands | int
+      - zabbix_agent_enableremotecommands | int >= 0
+      - zabbix_agent_enableremotecommands | int <= 1
+      - X | type_debug == "bool"
+      - X in ["a", "b"]
+
+- name: test if zabbix_agent_logremotecommands is set correctly
+  assert:
+    that:
+      - zabbix_agent_logremotecommands is defined
+      - zabbix_agent_logremotecommands | int
+      - zabbix_agent_logremotecommands | int >= 0
+      - zabbix_agent_logremotecommands | int <= 1
