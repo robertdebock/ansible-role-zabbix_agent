@@ -57,8 +57,6 @@
       - zabbix_agent_enableremotecommands is defined
       - zabbix_agent_enableremotecommands | length > 0
       - zabbix_agent_enableremotecommands in ["0", "1"]
-      - X | type_debug == "bool"
-      - X in ["a", "b"]
 
 - name: test if zabbix_agent_logremotecommands is set correctly
   assert:
