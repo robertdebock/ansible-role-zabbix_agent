@@ -55,9 +55,8 @@
   assert:
     that:
       - zabbix_agent_enableremotecommands is defined
-      - zabbix_agent_enableremotecommands | int
-      - zabbix_agent_enableremotecommands | int >= 0
-      - zabbix_agent_enableremotecommands | int <= 1
+      - zabbix_agent_enableremotecommands | length > 0
+      - zabbix_agent_enableremotecommands in ["0", "1"]
       - X | type_debug == "bool"
       - X in ["a", "b"]
 
@@ -65,6 +64,5 @@
   assert:
     that:
       - zabbix_agent_logremotecommands is defined
-      - zabbix_agent_logremotecommands | int
-      - zabbix_agent_logremotecommands | int >= 0
-      - zabbix_agent_logremotecommands | int <= 1
+      - zabbix_agent_logremotecommands | length > 0
+      - zabbix_agent_logremotecommands in ["0", "1"]

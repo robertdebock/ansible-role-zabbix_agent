@@ -12,7 +12,7 @@ zabbix_agent_hostmetadataitem: system.uname
 zabbix_agent_timeout: 3
 
 # Enable remote commands by setting this value to 1.
-zabbix_agent_enableremotecommands: 0
+zabbix_agent_enableremotecommands: "0"
 
 # Enable logging of remote commands by setting this value to 1.
-zabbix_agent_logremotecommands: 1
+zabbix_agent_logremotecommands: "1"
