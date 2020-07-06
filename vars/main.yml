@@ -1,5 +1,6 @@
 ---
 # vars file for zabbix_agent
+
 _zabbix_agent_service:
   default: zabbix-agent
   Suse: zabbix-agentd

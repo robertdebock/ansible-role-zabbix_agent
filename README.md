@@ -54,6 +54,7 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # Values used to confiure zabbix_agent.
+
 zabbix_agent_server_address: 127.0.0.1
 zabbix_agent_listen_port: 10050
 zabbix_agent_server_active_address: 127.0.0.1
