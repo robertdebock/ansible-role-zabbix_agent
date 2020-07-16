@@ -7,9 +7,6 @@
   package:
     name: zabbix-agent
     state: present
-  register: zabbix_agent_install_zabbix_agent_software
-  retries: 3
-  until: zabbix_agent_install_zabbix_agent_software is succeeded
 
 - name: configuring zabbix agent
   template:
