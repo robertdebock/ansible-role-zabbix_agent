@@ -12,6 +12,8 @@
   template:
     src: zabbix_agentd.conf.j2
     dest: /etc/zabbix/zabbix_agentd.conf
+    owner: zabbix
+    group: zabbix
     mode: "0640"
   notify:
     - restart zabbix-agent

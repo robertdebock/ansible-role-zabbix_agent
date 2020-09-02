@@ -63,11 +63,10 @@ zabbix_agent_server_active_address: 127.0.0.1
 
 zabbix_agent_hostname: "{{ ansible_fqdn }}"
 zabbix_agent_hostmetadata: system.uname
-zabbix_agent_hostmetadataitem: system.uname
 zabbix_agent_timeout: 3
 
-# Enable remote commands by setting this value to 1.
-zabbix_agent_enableremotecommands: "0"
+# Allow indicated remote keys.
+zabbix_agent_allow_key: "system.run[*]"
 
 # Enable logging of remote commands by setting this value to 1.
 zabbix_agent_logremotecommands: "1"

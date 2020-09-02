@@ -44,13 +44,6 @@
       - zabbix_agent_hostmetadata | length > 0
     quiet: yes
 
-- name: test if zabbix_agent_hostmetadataitem is set correctly
-  assert:
-    that:
-      - zabbix_agent_hostmetadataitem is defined
-      - zabbix_agent_hostmetadataitem | length > 0
-    quiet: yes
-
 - name: test if zabbix_agent_timeout is set correctly
   assert:
     that:
@@ -59,13 +52,13 @@
       - zabbix_agent_timeout | int >= 0
     quiet: yes
 
-- name: test if zabbix_agent_enableremotecommands is set correctly
+- name: test if zabbix_agent_allow_key is set correctly
   assert:
     that:
-      - zabbix_agent_enableremotecommands is defined
-      - zabbix_agent_enableremotecommands | length > 0
-      - zabbix_agent_enableremotecommands in ["0", "1"]
+      - zabbix_agent_allow_key | length > 0
     quiet: yes
+  when:
+    - zabbix_agent_allow_key is defined
 
 - name: test if zabbix_agent_logremotecommands is set correctly
   assert:

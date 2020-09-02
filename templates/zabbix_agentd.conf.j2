@@ -66,15 +66,7 @@ LogFileSize=0
 SourceIP={{ zabbix_agent_source_ip }}
 {% endif %}
 
-### Option: EnableRemoteCommands
-#	Whether remote commands from Zabbix server are allowed.
-#	0 - not allowed
-#	1 - allowed
-#
-# Mandatory: no
-# Default:
-# EnableRemoteCommands=0
-EnableRemoteCommands={{ zabbix_agent_enableremotecommands }}
+AllowKey=system.run[*]
 
 ### Option: LogRemoteCommands
 #	Enable logging of executed shell commands as warnings.
@@ -183,7 +175,6 @@ HostMetadata={{ zabbix_agent_hostmetadata }}
 # Mandatory: no
 # Default:
 # HostMetadataItem=
-HostMetadataItem={{ zabbix_agent_hostmetadataitem }}
 
 ### Option: RefreshActiveChecks
 #	How often list of active checks is refreshed, in seconds.
