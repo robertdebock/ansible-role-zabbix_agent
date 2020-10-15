@@ -25,7 +25,5 @@ galaxy_info:
   galaxy_tags:
     - zabbix
     - agent
-    - centos
-    - redhat
 
 dependencies: []
