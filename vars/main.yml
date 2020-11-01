@@ -7,14 +7,6 @@ _zabbix_agent_service:
 
 zabbix_agent_service: "{{ _zabbix_agent_service[ansible_os_family] | default(_zabbix_agent_service['default']) }}"
 
-_zabbix_agent_conf_d_directory:
-  default: /etc/zabbix/zabbix_agentd.d
-  Debian-bullseye: /etc/zabbix/zabbix_agentd.conf.d
+zabbix_agent_conf_d_directory: /etc/zabbix/zabbix_agentd.d
 
-zabbix_agent_conf_d_directory: "{{ _zabbix_agent_conf_d_directory[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_zabbix_agent_conf_d_directory['default']) }}"
-
-_zabbix_log_directory:
-  default: /var/log/zabbix
-  Debian-bullseye: /var/log/zabbix-agent
-
-zabbix_log_directory: "{{ _zabbix_log_directory[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_zabbix_log_directory['default']) }}"
+zabbix_log_directory: /var/log/zabbix
