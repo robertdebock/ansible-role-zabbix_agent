@@ -1,11 +1,7 @@
 ---
 # vars file for zabbix_agent
 
-_zabbix_agent_service:
-  default: zabbix-agent
-  Suse: zabbix-agentd
-
-zabbix_agent_service: "{{ _zabbix_agent_service[ansible_os_family] | default(_zabbix_agent_service['default']) }}"
+zabbix_agent_service: zabbix-agent
 
 zabbix_agent_conf_d_directory: /etc/zabbix/zabbix_agentd.d
 
