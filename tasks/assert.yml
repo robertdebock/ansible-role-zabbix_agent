@@ -65,5 +65,5 @@
     that:
       - zabbix_agent_logremotecommands is defined
       - zabbix_agent_logremotecommands | length > 0
-      - zabbix_agent_logremotecommands in ["0", "1"]
+      - zabbix_agent_logremotecommands in [ "0", "1" ]
     quiet: yes
