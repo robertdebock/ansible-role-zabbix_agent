@@ -10,7 +10,7 @@
   assert:
     that:
       - zabbix_agent_listen_port is defined
-      - zabbix_agent_listen_port | int
+      - zabbix_agent_listen_port is number
       - zabbix_agent_listen_port | int > 0
       - zabbix_agent_listen_port | int < 65536
     quiet: yes
@@ -48,7 +48,7 @@
   assert:
     that:
       - zabbix_agent_timeout is defined
-      - zabbix_agent_timeout | int
+      - zabbix_agent_timeout is number
       - zabbix_agent_timeout | int >= 0
     quiet: yes
 
