@@ -20,13 +20,6 @@
       - zabbix_agent_server_active_address is defined
     quiet: yes
 
-- name: test if zabbix_agent_source_ip is set correctly
-  assert:
-    that:
-    quiet: yes
-  when:
-    - zabbix_agent_source_ip is defined
-
 - name: test if zabbix_agent_hostname is set correctly
   assert:
     that:
@@ -46,13 +39,6 @@
       - zabbix_agent_timeout is number
       - zabbix_agent_timeout >= 0
     quiet: yes
-
-- name: test if zabbix_agent_allow_key is set correctly
-  assert:
-    that:
-    quiet: yes
-  when:
-    - zabbix_agent_allow_key is defined
 
 - name: test if zabbix_agent_logremotecommands is set correctly
   assert:
