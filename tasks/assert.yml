@@ -10,8 +10,8 @@
     that:
       - zabbix_agent_listen_port is defined
       - zabbix_agent_listen_port is number
-      - zabbix_agent_listen_port | int > 0
-      - zabbix_agent_listen_port | int < 65536
+      - zabbix_agent_listen_port > 0
+      - zabbix_agent_listen_port < 65536
     quiet: yes
 
 - name: test if zabbix_agent_server_active_address is set correctly
@@ -44,7 +44,7 @@
     that:
       - zabbix_agent_timeout is defined
       - zabbix_agent_timeout is number
-      - zabbix_agent_timeout | int >= 0
+      - zabbix_agent_timeout >= 0
     quiet: yes
 
 - name: test if zabbix_agent_allow_key is set correctly
