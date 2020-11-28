@@ -49,6 +49,6 @@
   assert:
     that:
       - zabbix_agent_logremotecommands is defined
-      - zabbix_agent_logremotecommands is number
+      - zabbix_agent_logremotecommands is string
       - zabbix_agent_logremotecommands in [ "0", "1" ]
     quiet: yes
