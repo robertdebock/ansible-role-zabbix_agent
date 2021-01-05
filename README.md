@@ -40,7 +40,7 @@ Also see a [full explanation and example](https://robertdebock.nl/how-to-use-the
 These variables are set in `defaults/main.yml`:
 ```yaml
 ---
-# Values used to confiure zabbix_agent.
+# Values used to configure zabbix_agent.
 
 zabbix_agent_server_address: 127.0.0.1
 zabbix_agent_listen_port: 10050
@@ -51,9 +51,6 @@ zabbix_agent_server_active_address: 127.0.0.1
 zabbix_agent_hostname: "{{ ansible_fqdn }}"
 zabbix_agent_hostmetadata: system.uname
 zabbix_agent_timeout: 3
-
-# Allow indicated remote keys.
-zabbix_agent_allow_key: "system.run[*]"
 
 # Enable logging of remote commands by setting this value to 1.
 zabbix_agent_logremotecommands: "1"
