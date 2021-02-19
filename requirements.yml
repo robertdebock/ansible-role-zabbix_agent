@@ -2,3 +2,5 @@
 roles:
   - name: robertdebock.bootstrap
   - name: robertdebock.zabbix_repository
+collections:
+  - name: ansible.builtin

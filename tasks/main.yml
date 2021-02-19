@@ -7,12 +7,12 @@
   delegate_to: localhost
 
 - name: install zabbix-agent software
-  package:
+  ansible.builtin.package:
     name: zabbix-agent
     state: present
 
 - name: configuring zabbix agent
-  template:
+  ansible.builtin.template:
     src: zabbix_agentd.conf.j2
     dest: /etc/zabbix/zabbix_agentd.conf
     owner: zabbix
@@ -22,7 +22,7 @@
     - restart zabbix-agent
 
 - name: start and enable zabbix agent
-  service:
+  ansible.builtin.service:
     name: "{{ zabbix_agent_service }}"
     state: started
     enabled: yes
