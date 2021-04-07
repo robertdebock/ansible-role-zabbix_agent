@@ -21,6 +21,19 @@
   notify:
     - restart zabbix-agent
 
+- name: place selinux type enforcement
+  ansible.builtin.copy:
+    src: my-zabbixagent.te
+    dest: /etc/zabbix/my-zabbixagent.te
+    mode: "0644"
+  notify:
+    - create selinux mod for zabbix_agent
+    - create selinux pp for zabbix_agent
+    - load selinux pp for zabbix_agent
+  when:
+    - ansible_selinux.status is defined
+    - ansible_selinux.status == "enabled"
+
 - name: start and enable zabbix agent
   ansible.builtin.service:
     name: "{{ zabbix_agent_service }}"
