@@ -14,7 +14,7 @@
 - name: configuring zabbix agent
   ansible.builtin.template:
     src: zabbix_agentd.conf.j2
-    dest: /etc/zabbix/zabbix_agentd.conf
+    dest: "{{ zabbix_agent_conf_dest }}"
     owner: zabbix
     group: zabbix
     mode: "0640"
