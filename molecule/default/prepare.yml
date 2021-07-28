@@ -6,4 +6,5 @@
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.ca_certificates
     - role: robertdebock.zabbix_repository
