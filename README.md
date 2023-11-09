@@ -2,9 +2,9 @@
 
 Install and configure zabbix_agent on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-zabbix_agent/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-zabbix_agent/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-zabbix_agent)|[![quality](https://img.shields.io/ansible/quality/35761)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|[![downloads](https://img.shields.io/ansible/role/d/35761)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-zabbix_agent.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-zabbix_agent/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-zabbix_agent/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-zabbix_agent)|[![downloads](https://img.shields.io/ansible/role/d/24633)](https://galaxy.ansible.com/robertdebock/zabbix_agent)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-zabbix_agent.svg)](https://github.com/robertdebock/ansible-role-zabbix_agent/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -98,7 +98,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-zabbix_agent/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-zabbix_agent/issues).
 
 ## [License](#license)
 
