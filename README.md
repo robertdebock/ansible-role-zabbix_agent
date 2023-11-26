@@ -1,4 +1,4 @@
-# Ansible role [zabbix_agent](#zabbix_agent)
+# [Ansible role zabbix_agent](#zabbix_agent)
 
 Install and configure zabbix_agent on your system.
 
