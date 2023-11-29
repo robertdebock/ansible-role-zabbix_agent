@@ -10,6 +10,7 @@
 - name: Install zabbix-agent software
   ansible.builtin.package:
     name: zabbix-agent
+    disable_gpg_check: yes
     state: present
 
 - name: Configuring zabbix agent
