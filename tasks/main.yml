@@ -24,10 +24,8 @@
 
 - name: Configuring zabbix agent
   ansible.builtin.template:
-    src: >-
-      {{ 'zabbix_agent2.conf.j2' if zabbix_agent_version == 'zabbix-agent2' else 'zabbix_agentd.conf.j2' }}
-    dest: >-
-      {{ '/etc/zabbix/zabbix_agent2.conf' if zabbix_agent_version == 'zabbix-agent2' else '/etc/zabbix/zabbix_agentd.conf' }}
+    src: "{{ zabbix_agent_template_src }}"
+    dest: "{{ zabbix_agent_template_dest }}"
     owner: zabbix
     group: zabbix
     mode: "0640"
