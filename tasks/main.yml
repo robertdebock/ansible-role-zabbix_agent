@@ -47,6 +47,6 @@
 
 - name: Start and enable zabbix agent
   ansible.builtin.service:
-    name: "{{ zabbix_agent_service }}"
+    name: "{{ zabbix_agent_version }}"
     state: started
     enabled: true
