@@ -9,7 +9,7 @@
 
 - name: Install zabbix-agent software (Not Debian)
   ansible.builtin.package:
-    name: zabbix-agent
+    name: "{{ zabbix_agent_version }}"
     disable_gpg_check: true
     state: present
   when:
@@ -17,15 +17,15 @@
 
 - name: Install zabbix-agent software (Debian)
   ansible.builtin.package:
-    name: zabbix-agent
+    name: "{{ zabbix_agent_version }}"
     state: present
   when:
     - ansible_os_family == "Debian"
 
 - name: Configuring zabbix agent
   ansible.builtin.template:
-    src: zabbix_agentd.conf.j2
-    dest: "{{ zabbix_agent_conf_dest }}"
+    src: "{{ zabbix_agent_template_src }}"
+    dest: "{{ zabbix_agent_template_dest }}"
     owner: zabbix
     group: zabbix
     mode: "0640"
@@ -47,6 +47,6 @@
 
 - name: Start and enable zabbix agent
   ansible.builtin.service:
-    name: "{{ zabbix_agent_service }}"
+    name: "{{ zabbix_agent_version }}"
     state: started
     enabled: true
