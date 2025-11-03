@@ -5,4 +5,4 @@
 repository:
   description: Install and configure zabbix_agent on your system.
   homepage: https://robertdebock.nl/
-  topics: zabbix, agent, monitoring, ansible, molecule, tox, playbook
+  topics: zabbix, agent, monitoring, ansible, molecule, playbook
