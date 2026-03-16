@@ -14,9 +14,6 @@ galaxy_info:
     - name: Debian
       versions:
         - bullseye
-    - name: Ubuntu
-      versions:
-        - focal
 
   galaxy_tags:
     - zabbix

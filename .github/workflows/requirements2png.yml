@@ -4,7 +4,9 @@
 #
 
 on:
-  - push
+  release:
+    types:
+      - published
 
 name: Ansible Graphviz
 
@@ -32,4 +34,4 @@ jobs:
         with:
           directory: ${{ github.repository }}
           force: true
-          branch: png
+          branch: refs/heads/png
