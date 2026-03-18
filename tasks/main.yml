@@ -13,14 +13,14 @@
     disable_gpg_check: true
     state: present
   when:
-    - ansible_os_family != "Debian"
+    - ansible_facts['os_family'] != "Debian"
 
 - name: Install zabbix-agent software (Debian)
   ansible.builtin.package:
     name: zabbix-agent
     state: present
   when:
-    - ansible_os_family == "Debian"
+    - ansible_facts['os_family'] == "Debian"
 
 - name: Configuring zabbix agent
   ansible.builtin.template:
@@ -42,8 +42,8 @@
     - Create selinux pp for zabbix_agent
     - Load selinux pp for zabbix_agent
   when:
-    - ansible_selinux.status is defined
-    - ansible_selinux.status == "enabled"
+    - ansible_facts['selinux'].status is defined
+    - ansible_facts['selinux'].status == "enabled"
 
 - name: Start and enable zabbix agent
   ansible.builtin.service:
