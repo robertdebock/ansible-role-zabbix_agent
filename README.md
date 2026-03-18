@@ -52,7 +52,7 @@ zabbix_agent_server_active_address: "127.0.0.1"
 # Not mandatory, but possible to overwrite.
 # zabbix_agent_source_ip: "127.0.0.1"
 
-zabbix_agent_hostname: "{{ ansible_fqdn }}"
+zabbix_agent_hostname: "{{ ansible_facts['fqdn'] }}"
 zabbix_agent_hostmetadata: system.uname
 zabbix_agent_timeout: 3
 
