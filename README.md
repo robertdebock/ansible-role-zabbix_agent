@@ -44,6 +44,9 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
+# Zabbix version selection 'zabbix-agent' or 'zabbix-agent2'
+zabbix_agent_version: "zabbix-agent2"
+
 # Values used to configure zabbix_agent.
 
 zabbix_agent_server_address: "127.0.0.1"
