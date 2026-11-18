@@ -22,6 +22,22 @@
   when:
     - ansible_facts['os_family'] == "Debian"
 
+- name: Create the log directory
+  ansible.builtin.file:
+    path: "{{ zabbix_log_directory }}"
+    state: directory
+    owner: zabbix
+    group: zabbix
+    mode: "0750"
+
+- name: Create the include directory
+  ansible.builtin.file:
+    path: "{{ zabbix_agent_conf_d_directory }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
 - name: Configuring zabbix agent
   ansible.builtin.template:
     src: zabbix_agentd.conf.j2
