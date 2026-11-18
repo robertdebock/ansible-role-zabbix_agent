@@ -1,8 +1,6 @@
 ---
 # vars file for zabbix_agent
 
-zabbix_agent_service: zabbix-agent
-
 _zabbix_agent_conf_dest:
   default: /etc/zabbix/zabbix_agentd.conf
   Fedora: /etc/zabbix_agentd.conf
